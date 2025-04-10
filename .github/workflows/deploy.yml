@@ -7,10 +7,10 @@ on:
 
 env:
   AWS_REGION: us-east-1
-  ECR_REPOSITORY: my-api
-  ECS_CLUSTER: MyECSCluster
-  ECS_SERVICE: MyAPIService
-  ECS_TASK_DEF: my-api-task
+  ECR_REPOSITORY: mihir-api  # Updated to match Mihir prefix
+  ECS_CLUSTER: MihirECSCluster  # Updated to match Mihir prefix
+  ECS_SERVICE: MihirAPIService  # Updated to match Mihir prefix
+  ECS_TASK_DEF: mihir-api-task  # Updated to match Mihir prefix
 
 jobs:
   build-and-deploy:
