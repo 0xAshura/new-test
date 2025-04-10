@@ -35,13 +35,8 @@ jobs:
       run: |
         IMAGE_TAG=latest
         docker build -t $ECR_REPOSITORY:$IMAGE_TAG -f app/Dockerfile app
-<<<<<<< HEAD
         docker tag $ECR_REPOSITORY:$IMAGE_TAG 180294199255.dkr.ecr.us-east-1.amazonaws.com/$ECR_REPOSITORY:$IMAGE_TAG
         docker push 180294199255.dkr.ecr.us-east-1.amazonaws.com/$ECR_REPOSITORY:$IMAGE_TAG
-=======
-        docker tag $ECR_REPOSITORY:$IMAGE_TAG ${{ steps.login-ecr.outputs.registry }}/$ECR_REPOSITORY:$IMAGE_TAG
-        docker push ${{ steps.login-ecr.outputs.registry }}/$ECR_REPOSITORY:$IMAGE_TAG
->>>>>>> f9daadabbfa8864d1524a9c0e3ad8b27a16486e2
 
     - name: Update ECS Task Definition
       run: |
